@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>베트남 푸꾸옥&호치민 가족여행 🌴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ffa726);
+            border-radius: 15px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .date-range {
+            font-size: 1.1em;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+        
+        .family-info {
+            background: linear-gradient(135deg, #a8edea, #fed6e3);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .family-info h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .family-list {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .family-item {
+            background: rgba(255,255,255,0.7);
+            padding: 12px;
+            border-radius: 10px;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid #e1e8ed;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .flight-info {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .flight-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .flight-route {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .flight-time {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .hotel-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .hotel-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #e74c3c;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .hotel-name {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .hotel-dates {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        
+        .schedule-grid {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .day-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 1px solid #e1e8ed;
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+        }
+        
+        .day-content {
+            padding: 15px;
+        }
+        
+        .activity {
+            margin-bottom: 12px;
+            padding: 10px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 3px solid #9b59b6;
+        }
+        
+        .activity:last-child {
+            margin-bottom: 0;
+        }
+        
+        .time {
+            font-weight: bold;
+            color: #3498db;
+            margin-right: 8px;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: center;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+                border-radius: 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.5em;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌴 베트남 푸꾸옥 & 호치민 가족여행 🌆</h1>
+            <div class="date-range">2025년 7월 25일 ~ 8월 3일 (7박 9일)</div>
+        </div>
+
+        <div class="family-info">
+            <h2>👨‍👩‍👧‍👦 여행 참가자 (총 10명)</h2>
+            <div class="family-list">
+                <div class="family-item">
+                    <strong>송이네 가족 (3명)</strong><br>
+                    부부 + 7살 여아 👨‍👩‍👧
+                </div>
+                <div class="family-item">
+                    <strong>연화네 가족 (3명)</strong><br>
+                    부부 + 7살 여아 👨‍👩‍👧
+                </div>
+                <div class="family-item">
+                    <strong>경미네 가족 (4명)</strong><br>
+                    부부 + 7살 남아 2명 👨‍👩‍👦‍👦
+                </div>
+            </div>
+            <div class="highlight">
+                🎯 여행 목적: 가족 단위 휴양 & 문화 체험
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✈️ 항공 스케줄</h2>
+            <div class="flight-info">
+                <div class="flight-item">
+                    <div class="flight-route">ICN → SGN (인천 → 호치민)</div>
+                    <div class="flight-time">7/25 10:35 → 13:20 (약 4시간 45분)</div>
+                </div>
+                <div class="flight-item">
+                    <div class="flight-route">환승 대기 (SGN T2→T3)</div>
+                    <div class="flight-time">약 5시간 15분</div>
+                </div>
+                <div class="flight-item">
+                    <div class="flight-route">SGN → PQC (호치민 → 푸꾸옥)</div>
+                    <div class="flight-time">7/25 18:35 → 19:35 (약 1시간)</div>
+                </div>
+                <div class="flight-item">
+                    <div class="flight-route">PQC → SGN (푸꾸옥 → 호치민)</div>
+                    <div class="flight-time">7/31 12:05 → 13:15 (약 1시간 10분)</div>
+                </div>
+                <div class="flight-item">
+                    <div class="flight-route">SGN → ICN (호치민 → 인천)</div>
+                    <div class="flight-time">8/2 23:45 → 8/3 06:40 (약 5시간 55분)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🏨 숙소 계획</h2>
+            <div class="hotel-list">
+                <div class="hotel-item">
+                    <div class="hotel-name">New World Phu Quoc Resort (풀빌라)</div>
+                    <div class="hotel-dates">7/25 ~ 7/27 (푸꾸옥)</div>
+                </div>
+                <div class="hotel-item">
+                    <div class="hotel-name">Mövenpick Resort Waverly Phu Quoc (풀빌라)</div>
+                    <div class="hotel-dates">7/28 ~ 7/30 (푸꾸옥)</div>
+                </div>
+                <div class="hotel-item">
+                    <div class="hotel-name">Sherwood Residence</div>
+                    <div class="hotel-dates">7/31 ~ 8/2 (호치민)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📅 상세 일정</h2>
+            <div class="schedule-grid">
+                <div class="day-card">
+                    <div class="day-header">7월 25일 (금) - 출발 & 푸꾸옥 도착</div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <span class="time">10:35</span> 인천공항 출발
+                        </div>
+                        <div class="activity">
+                            <span class="time">13:20</span> 호치민 도착 & 환승 대기
+                        </div>
+                        <div class="activity">
+                            <span class="time">18:35</span> 호치민 출발 → 푸꾸옥 도착
+                        </div>
+                        <div class="activity">
+                            <span class="time">저녁</span> New World Resort 체크인 & 풀빌라 수영
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">7월 26일 (토) - 혼톰 케이블카 & Vinpearl</div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <span class="time">08:00</span> 리조트 조식 뷔페
+                        </div>
+                        <div class="activity">
+                            <span class="time">09:30</span> 혼톰 케이블카 탑승 🚡
+                        </div>
+                        <div class="activity">
+                            <span class="time">10:30</span> 혼톰 아일랜드 스노클링 & 해변 놀이
+                        </div>
+                        <div class="activity">
+                            <span class="time">12:30</span> Vinpearl Land & Safari 동물원 투어 🦁
+                        </div>
+                        <div class="activity">
+                            <span class="time">19:30</span> 씨푸드 BBQ 석식
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">7월 27일 (일) - 안토이 군도 호핑</div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <span class="time">08:30</span> 안토이 군도 호핑 투어 🛥️
+                        </div>
+                        <div class="activity">
+                            <span class="time">12:00</span> 함닌 어촌 마을 & 해산물 시장
+                        </div>
+                        <div class="activity">
+                            <span class="time">14:00</span> 후추 농장 & 피쉬소스 공장 투어
+                        </div>
+                        <div class="activity">
+                            <span class="time">19:30</span> 현지 해산물 레스토랑 석식 🦀
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">7월 28일 (월) - 리조트 이동</div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <span class="time">10:00</span> Mövenpick Resort 이동 & 체크인
+                        </div>
+                        <div class="activity">
+                            <span class="time">14:00</span> 키즈 클럽 & 워터슬라이드 🏊‍♂️
+                        </div>
+                        <div class="activity">
+                            <span class="time">16:00</span> 스파 & 가족 마사지 💆‍♀️
+                        </div>
+                        <div class="activity">
+                            <span class="time">18:30</span> 풀빌라 바비큐 & 선셋 바 일몰 감상 🌅
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">7월 29일 (화) - 자유시간 & 야시장</div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <span class="time">09:30</span> 자유시간 (비치 산책 / 리조트 액티비티)
+                        </div>
+                        <div class="activity">
+                            <span class="time">16:30</span> 선셋 크루즈 (칵테일 & 일몰 감상) 🛥️
+                        </div>
+                        <div class="activity">
+                            <span class="time">19:00</span> 현지 펍 방문
+                        </div>
+                        <div class="activity">
+                            <span class="time">20:30</span> 푸꾸옥 야시장 탐방 🍢
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">7월 30일 (수) - 케엄 비치 & 쇼핑</div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <span class="time">09:30</span> 케엄 비치 산책 🏖️
+                        </div>
+                        <div class="activity">
+                            <span class="time">12:00</span> 비치 카페 점심 (코코넛 크랩 추천)
+                        </div>
+                        <div class="activity">
+                            <span class="time">14:00</span> 기념품 쇼핑 (후추, 피쉬소스, 심 와인)
+                        </div>
+                        <div class="activity">
+                            <span class="time">20:00</span> 풀빌라 바비큐 파티 🍖
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">7월 31일 (목) - 호치민 이동 & 시내 투어</div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <span class="time">12:05</span> 푸꾸옥 출발 → 호치민 도착
+                        </div>
+                        <div class="activity">
+                            <span class="time">15:30</span> 호치민 시내 투어 (중앙우체국, 노트르담 대성당)
+                        </div>
+                        <div class="activity">
+                            <span class="time">18:30</span> 벤탄 시장 탐방
+                        </div>
+                        <div class="activity">
+                            <span class="time">20:00</span> Bui Vien 거리 석식 🍜
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">8월 1일 (금) - 메콩 델타 투어</div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <span class="time">08:00</span> 메콩 델타 일일 투어 🛶
+                        </div>
+                        <div class="activity">
+                            <span class="time">12:00</span> 리버사이드 레스토랑 점심
+                        </div>
+                        <div class="activity">
+                            <span class="time">13:30</span> 카오 단 시장 탐방
+                        </div>
+                        <div class="activity">
+                            <span class="time">19:00</span> 리버 디너 크루즈 🚢
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">8월 2일 (토) - 마지막 관광 & 출발</div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <span class="time">09:30</span> 전쟁박물관 방문 🏛️
+                        </div>
+                        <div class="activity">
+                            <span class="time">11:30</span> 자뎅 사원 방문 🏯
+                        </div>
+                        <div class="activity">
+                            <span class="time">13:00</span> 벤탄 시장 마지막 쇼핑
+                        </div>
+                        <div class="activity">
+                            <span class="time">23:45</span> 호치민 출발
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-card">
+                    <div class="day-header">8월 3일 (일) - 귀국</div>
+                    <div class="day-content">
+                        <div class="activity">
+                            <span class="time">06:40</span> 인천공항 도착 🏠
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight">
+            🌟 즐거운 베트남 가족여행 되세요! 🌟
+        </div>
+    </div>
+</body>
+</html>
